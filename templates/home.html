@@ -4,14 +4,19 @@
 <title>Chat Example</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="/statics/js/socket.js" type="text/javascript"></script>
-<link href="/statics/css/home.css" rel="stylesheet" type="text/css">
+<link href="/statics/css/chat.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <input type="hidden" class="host" value="{{.host}}">
-<div id="log"></div>
+<div id="log">
+    <dl class="vhe m1">
+        <dt><a>哥哥</a><span>2015-09-11</span></dt>
+        <dd>我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试我是测试</dd>
+    </dl>
+</div>
 <form id="form">
     <input type="submit" value="Send" />
-    <input type="text" id="msg" size="64"/>
+    <input type="text" id="msg" size="64" value=""/>
 </form>
 </body>
 </html>

@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/gorilla/websocket"
 	"log"
+	"net/http"
 	"time"
-	"gopkg.in/macaron.v1"
 )
 
 const (
@@ -92,8 +92,8 @@ func (c *connection) writePump() {
 }
 
 // serveWs handles websocket requests from the peer.
-func serveWs(ctx *macaron.Context) {
-	ws, err := upgrader.Upgrade(ctx.Resp, ctx.Req, nil)
+func serveWs(w http.ResponseWriter, r *http.Request) {
+	ws, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Println(err)
 		return
