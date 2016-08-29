@@ -1,8 +1,5 @@
-# Chat Example
-
-This application shows how to use use the
-[websocket](https://github.com/gorilla/websocket) package and
-[jQuery](http://jquery.com) to implement a simple web chat application.
+# Chat
+使用GO写的基于webSocket的在线聊天系统
 
 ## Running the example
 
